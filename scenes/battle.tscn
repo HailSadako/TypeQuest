@@ -1,0 +1,92 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://code/battle.gd" type="Script" id=1]
+[ext_resource path="res://scenes/input_bar.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/warrior.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/thief.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/wizard.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/priest.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/combat_ui.tscn" type="PackedScene" id=7]
+
+[node name="Battle" type="Node" index="0"]
+
+script = ExtResource( 1 )
+target_all_color = Color( 0.7, 0.7, 0.8, 1 )
+
+[node name="Target All" type="Node2D" parent="." index="0"]
+
+position = Vector2( 123, 227 )
+z_index = 999
+z_as_relative = false
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Input Bar" parent="Target All" index="0" instance=ExtResource( 2 )]
+
+editor/display_folded = true
+margin_left = 48.0
+margin_top = -11.0
+margin_right = 48.0
+margin_bottom = -11.0
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Panel" parent="Target All/Input Bar" index="0"]
+
+editor/display_folded = true
+
+[node name="Spawn 1" type="Position2D" parent="." index="1"]
+
+position = Vector2( 370, 49 )
+
+[node name="Spawn 2" type="Position2D" parent="." index="2"]
+
+position = Vector2( 372, 111 )
+
+[node name="Spawn 3" type="Position2D" parent="." index="3"]
+
+position = Vector2( 373, 173 )
+
+[node name="Spawn 4" type="Position2D" parent="." index="4"]
+
+position = Vector2( 373, 233 )
+
+[node name="Spawn 5" type="Position2D" parent="." index="5"]
+
+position = Vector2( 375, 307 )
+
+[node name="YSort" type="YSort" parent="." index="6"]
+
+sort_enabled = true
+
+[node name="Warrior" parent="YSort" index="0" instance=ExtResource( 3 )]
+
+editor/display_folded = true
+position = Vector2( 190.574, 180.011 )
+
+[node name="Thief" parent="YSort" index="1" instance=ExtResource( 4 )]
+
+position = Vector2( 142.629, 77.569 )
+defense = 1
+
+[node name="Wizard" parent="YSort" index="2" instance=ExtResource( 5 )]
+
+editor/display_folded = true
+position = Vector2( 145.116, 282.608 )
+
+[node name="Priest" parent="YSort" index="3" instance=ExtResource( 6 )]
+
+editor/display_folded = true
+position = Vector2( 57.6918, 180.435 )
+
+[node name="Combat UI" parent="." index="7" instance=ExtResource( 7 )]
+
+margin_left = 171.0
+margin_top = 273.0
+margin_right = 211.0
+margin_bottom = 313.0
+
+
+[editable path="Target All/Input Bar"]
+[editable path="YSort/Warrior"]
+[editable path="YSort/Thief"]
+[editable path="YSort/Wizard"]
+[editable path="YSort/Priest"]

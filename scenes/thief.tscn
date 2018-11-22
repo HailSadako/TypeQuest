@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/hero.tscn" type="PackedScene" id=1]
+[ext_resource path="res://code/thief.gd" type="Script" id=2]
+[ext_resource path="res://textures/ui/icon_thief.png" type="Texture" id=3]
+[ext_resource path="res://textures/sprites/Thief.png" type="Texture" id=4]
+
+[node name="Thief" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+defense = 0.8
+color = Color( 0.90625, 0.300903, 0.315091, 1 )
+icon = ExtResource( 3 )
+
+[node name="Sprite" parent="." index="0"]
+
+texture = ExtResource( 4 )
+
+
+[editable path="Target/Input Bar"]

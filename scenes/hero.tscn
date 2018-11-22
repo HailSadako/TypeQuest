@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/actor.tscn" type="PackedScene" id=1]
+[ext_resource path="res://code/hero.gd" type="Script" id=2]
+
+[node name="Hero" index="0" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+color = null
+icon = null
+
+[node name="Panel" parent="Target/Input Bar" index="0"]
+
+editor/display_folded = false
+
+[node name="Enemy 1" type="Position2D" parent="." index="4"]
+
+position = Vector2( 36, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Enemy 2" type="Position2D" parent="." index="5"]
+
+position = Vector2( 0, -36 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Enemy 3" type="Position2D" parent="." index="6"]
+
+position = Vector2( 0, 36 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Enemy 4" type="Position2D" parent="." index="7"]
+
+position = Vector2( 18, 18 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Enemy 5" type="Position2D" parent="." index="8"]
+
+position = Vector2( 18, -18 )
+_sections_unfolded = [ "Transform" ]
+
+
+[editable path="Target/Input Bar"]

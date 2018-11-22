@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://code/skeleton.gd" type="Script" id=2]
+[ext_resource path="res://textures/sprites/Skeleton.png" type="Texture" id=3]
+
+[node name="Skeleton" index="0" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+attack_interval = 3.0
+
+[node name="Sprite" parent="." index="0"]
+
+texture = ExtResource( 3 )
+
+[node name="Input Bar" parent="Target" index="0"]
+
+_sections_unfolded = [ "Material", "Visibility" ]
+
+[node name="Panel" parent="Target/Input Bar" index="0"]
+
+editor/display_folded = false
+
+[node name="Shadow" parent="Target/Input Bar/Panel" index="0"]
+
+_sections_unfolded = [ "Anchor", "Margin", "Rect", "Size Flags", "Visibility", "custom_colors", "custom_constants", "custom_fonts" ]
+
+
+[editable path="Target/Input Bar"]

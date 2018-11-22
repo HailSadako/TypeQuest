@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/hero.tscn" type="PackedScene" id=1]
+[ext_resource path="res://code/warrior.gd" type="Script" id=2]
+[ext_resource path="res://textures/ui/icon_warrior.png" type="Texture" id=3]
+[ext_resource path="res://textures/sprites/Warrior.png" type="Texture" id=4]
+
+[node name="Warrior" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+base_hp = 200
+defense = 0.5
+color = Color( 1, 0.796875, 0, 1 )
+icon = ExtResource( 3 )
+
+[node name="Sprite" parent="." index="0"]
+
+texture = ExtResource( 4 )
+
+
+[editable path="Target/Input Bar"]
